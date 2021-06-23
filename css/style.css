@@ -158,7 +158,6 @@ img {
 
 .hero {
   background-color: var(--light-blue);
-  height: 70vh;
   border-radius: 0 0 900px 0;
   padding: 2rem 7vw;
 }
@@ -182,6 +181,10 @@ img {
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+.service {
+  overflow: hidden;
 }
 
 /* 
