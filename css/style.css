@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
 
 * {
   border: none;
@@ -8,4 +8,232 @@
   text-decoration: none;
   box-sizing: border-box;
   color: black;
+}
+
+:root {
+  --light-blue: #3b94f8;
+  --light-orange: #e5b029;
+  --special-font: "Montserrat", sans-serif;
+  --common-font: "Open Sans", sans-serif;
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 1rem;
+  /* --sp-4: 1.5rem; */
+  --sp-5: 2rem;
+  --sp-6: 3rem;
+
+  --rounded-1: 8px;
+  --rounded-2: 16px;
+}
+
+/*
+====================
+    Global Styles
+====================
+*/
+
+body {
+  font-family: var(--special-font);
+  font-size: 100%;
+  /* padding: 4vw 0; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--special-font);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.13rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.9rem;
+}
+
+.main-header *,
+.hero * {
+  color: white;
+}
+
+img {
+  display: block;
+}
+
+/*
+==============
+    Layout
+==============
+*/
+
+.contact-us {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  background-color: var(--light-orange);
+  padding: 0.5rem 7vw;
+}
+
+.main-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: var(--light-blue);
+  position: relative;
+  padding: 1.5rem 7vw;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+}
+
+.logo-name,
+.menu-icon {
+  z-index: 1;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  height: auto;
+}
+.line {
+  margin: 0.4em 0;
+}
+.menu-icon::before,
+.menu-icon .line,
+.menu-icon::after {
+  display: block;
+  content: "";
+  background-color: black;
+  height: 2px;
+}
+.menu-icon::after {
+  width: 50%;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.4em;
+  height: 1.4em;
+  z-index: 5;
+  opacity: 0;
+}
+
+.toggler:checked ~ .menu {
+  display: inherit;
+  position: absolute;
+  background-color: pink;
+  width: 100%;
+}
+.toggler:checked ~ .menu > ul {
+  margin: var(--sp-5) auto;
+}
+.toggler:checked ~ .menu .menu-item {
+  line-height: 2;
+  text-align: center;
+}
+
+.hero {
+  background-color: var(--light-blue);
+  height: 70vh;
+  border-radius: 0 0 900px 0;
+  padding: 2rem 7vw;
+}
+
+.hero-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+}
+.hero-content .wrapper {
+  width: 90%;
+}
+.hero-image {
+  margin-left: 10%;
+  width: 80%;
+}
+
+.tagline {
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* 
+==================
+    Components
+==================
+ */
+
+.social-links {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.social-links img {
+  height: 24px;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: var(--light-orange);
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+}
+
+/* 
+===============
+    Queries
+===============
+ */
+
+@media screen and (min-width: 720px /*480px*/) {
+  .menu-icon,
+  .toggler {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  .menu > ul {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: var(--sp-5);
+  }
+
+  .hero {
+    border-radius: 0 0 80% 0;
+    padding: 3rem 7vw 0;
+  }
+
+  .hero-content .wrapper,
+  .hero-image {
+    width: 47%;
+    margin-left: 0;
+  }
 }
