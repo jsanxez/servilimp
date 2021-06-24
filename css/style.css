@@ -245,9 +245,6 @@ img {
   height: 10rem;
   margin: auto;
 }
-.card:hover {
-  border: 1px solid var(--light-orange);
-}
 .card-title, .card-description {
   text-align: center;
   margin-top: 1rem;
@@ -260,6 +257,19 @@ img {
   font-family: var(--common-font);
   font-weight: normal;
 }
+
+/* 
+==================
+    Animations
+==================
+ */
+
+ .menu-item a:hover {
+   border-bottom: 2px solid var(--light-orange);
+ }
+
+ .card { transition: box-shadow .4s ease;}
+.card:hover { box-shadow: 0 2px 2px var(--light-orange);}
 
 /* 
 ===============
