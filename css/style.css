@@ -231,6 +231,7 @@ img {
   font-weight: normal;
   background-color: var(--light-orange);
   border-radius: 100px;
+  cursor: pointer;
   padding: 0.5rem 1rem;
 }
 
@@ -269,6 +270,14 @@ img {
 
  .card { transition: box-shadow .4s ease;}
 .card:hover { box-shadow: 0 2px 2px var(--light-orange);}
+
+.btn {
+  transition: all .5s ease;
+}
+.btn:hover {
+  transform: translate(0, -2px);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+}
 
 /* 
 ===============
