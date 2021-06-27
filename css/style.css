@@ -70,7 +70,10 @@ img {
   display: block;
 }
 
-.section { margin: 0 7vw;}
+.section {
+  margin: 0 7vw;
+  padding: var(--sp-6) 0;
+}
 
 .section-title, .section-subtitle {
   text-align: center;
@@ -213,10 +216,6 @@ img {
   justify-content: center;
   gap: 1rem;
  }
-
-.services {
-  padding: var(--sp-6) 0;
-}
 
 .social-links {
   display: flex;
