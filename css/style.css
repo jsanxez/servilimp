@@ -208,6 +208,9 @@ img {
   margin-top: 3rem;
 }
 
+.main-footer .social-links img{
+  height: 32px;
+}
 /* 
 ==================
     Components
@@ -223,6 +226,7 @@ img {
 .social-links {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 .social-links img {
@@ -241,7 +245,8 @@ img {
 .card {
   width: 270px;
   border-radius: var(--sp-2);
-  padding: 1rem;
+  border: 1px solid #f2f2f2;
+  padding: 2rem 1rem;
 }
 .card img {
   width: 100%;
@@ -253,12 +258,40 @@ img {
   margin-top: 1rem;
 }
 .card-title {
+  font-size: 1.1rem;
   color: var(--light-blue);
 }
 .card-description {
   color: darkslategray;
   font-family: var(--common-font);
   font-weight: normal;
+}
+
+.widget {
+  max-width: 300px;
+  /* border: 1px solid red; */
+}
+.widget-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lightgray;
+  margin-bottom: 1.2rem;
+}
+.widget-body * {
+  color: white;
+}
+.widget-body > * {
+  display: block;
+  padding: .4rem 0;
+}
+
+.main-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--light-blue);
+  padding: 2rem 7vw;
 }
 
 /* 
@@ -271,7 +304,11 @@ img {
    border-bottom: 2px solid var(--light-orange);
  }
 
- .card { transition: box-shadow .4s ease;}
+ .card {
+   /* transition: box-shadow .4s ease; */
+   transition: position 1s ease-in-out;
+
+  }
 .card:hover { box-shadow: 0 2px 2px var(--light-orange);}
 
 .btn {
@@ -281,6 +318,16 @@ img {
   transform: translate(0, -2px);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
 }
+
+/* 
+=================
+    Utilities
+=================
+ */
+
+.dflex {display: flex !important;}
+
+.justify-content-right {justify-content: flex-end;}
 
 /* 
 ===============
